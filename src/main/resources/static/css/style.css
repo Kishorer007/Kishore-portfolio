@@ -283,6 +283,7 @@ body.dark-mode .card {
   padding: 10px 0;
   font-family: Arial, sans-serif;
   display: flex;
+  margin: auto;
 }
 
 .footer p {
