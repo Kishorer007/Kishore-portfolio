@@ -283,7 +283,7 @@ body.dark-mode .card {
   padding: 10px 0;
   font-family: Arial, sans-serif;
   display: flex;
-  margin: auto;
+  justify-content: center;
 }
 
 .footer p {
@@ -295,7 +295,7 @@ body.dark-mode .card {
 .footer-links {
   display: flex;
   gap: 15px;
-  justify-content: center;
+  margin-left:500px ;
 }
 
 .footer-links a {
@@ -304,6 +304,7 @@ body.dark-mode .card {
   font-weight: bold;
   font-size: 14px;
   transition: color 0.3s ease;
+  
 }
 
 .footer-links a:hover {
