@@ -1,6 +1,6 @@
 package com.kishore.service;
 
-import com.yourpackage.model.ContactMessage;
+import com.kishore.model.ContactMessage;
 import jakarta.mail.MessagingException;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.mail.javamail.JavaMailSender;

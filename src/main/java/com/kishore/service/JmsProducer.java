@@ -1,6 +1,6 @@
 package com.kishore.service;
 
-import com.yourpackage.model.ContactMessage;
+import com.kishore.model.ContactMessage;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
