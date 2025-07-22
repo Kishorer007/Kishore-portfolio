@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kishore Portfolio - One Page Scroll</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    @media (max-width: 600px) {
+      nav a, .btn {
+        display: block;
+        margin: 10px 0;
+      }
+      nav {
+        padding: 15px;
+      }
+      section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">Switch Mode</button>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+ <section id="home">
+ <div id="Welcome"><p>Welcome to my <span>Portfolio!</span></p></div>
+  <div class="home-container">
+    <div class="home-text">
+      <h1>Hello I'm Kishore</h1>
+      <p id="about">About Me</p>
+   <p>
+  I’m a <strong>Java Full Stack Developer</strong> with hands-on experience in building dynamic web applications using 
+  <strong>Java, Spring Boot, Hibernate, JSP, and MySQL</strong> on the backend, and 
+  <strong>HTML, CSS, JavaScript</strong> on the frontend. I specialize in developing end-to-end solutions with 
+  clean code, efficient design, and strong database integration. I’m passionate about turning ideas into 
+  real-time applications that solve real-world problems.
+	</p>
+    <p>
+  I am a <strong>quick learner</strong>, <strong>detail-oriented</strong>, and thrive in <strong>problem-solving</strong> scenarios. 
+  I focus on building <strong>robust</strong> and <strong>scalable web applications</strong> that deliver meaningful value to both users and businesses. 
+  I’m committed to <strong>continuous growth</strong> and love exploring new <strong>technologies and development practices</strong> to enhance my skills and the quality of my work.
+	</p>
+
+
+  
+   <a class="btn" href="/files/Kishore R.pdf" download>MY Resume</a>
+    </div>
+    <div class="home-image" style="position: relative; width: 300px; height: 300px;">
+  <div class="blob-bg" style="background: linear-gradient(135deg, #6e8efb, #a777e3);"></div>
+  <img src="images/profile.jpg" alt="Kishore R" style="width: 100%; border-radius: 50%; position: relative; z-index: 1;">
+	</div>
+
+    </div>
+
+</section>
+  
+
+	  <section id="skills">
+	  <h2>Skills</h2>
+	  <div class="card-container">
+	    <div class="card">Java</div>
+	    <div class="card">Spring Boot</div>
+	    <div class="card">HTML & CSS</div>
+	    <div class="card">JavaScript</div>
+	    <div class="card">MySQL</div>
+	    <div class="card">Servlet</div>
+	    <div class="card">Hibernate</div>
+	    <div class="card">JDBC</div>
+	    <div class="card">REST API</div>
+	    <div class="card">BootsStrap</div>
+	    <div class="card">GIT & GIT Hub</div>
+	    <div class="card">Tomcat</div>
+	 	 </div>
+		</section>
+
+
+	<section id="projects">
+	  <h2>Projects</h2>
+	  <div class="card-container">
+	    <div class="card">
+	    <img src="/images/movie ticket.png" alt="Movie Ticket Booking System">
+	      <h3>Movie Ticket Booking System</h3>
+	      <p><b>Using: Spring Boot, Thymeleaf, JPA, MySQL </b></p>
+	      <p>A web application for selecting movies, booking tickets, and receiving confirmation Mail.</p>
+	     <a href="https://github.com/your-repo" target="_blank" class="small-button">GitHub</a>
+
+	    </div>
+	    
+	    <div class="card">
+	    <img src="/images/EMS.png" alt="Employee Management System">
+	      <h3>Employee Management System</h3>
+	      <p><b>Using:  Java, Spring MVC, Hibernate, JSP, MySQL </b></p>
+	      <p>Full-stack web application to manage employee data such as name, place, contact, etc.</p>
+        <a href="https://github.com/your-repo" target="_blank" class="small-button">GitHub</a>
+
+	    </div>
+
+	    <div class="card">
+	    <img src="/images/loginPage.png" alt="Login Page">
+	      <h3>Login Page with Validation</h3>
+	      <p><b>Using:HTML, CSS, JavaScript</b></p>
+	      <p>A responsive login form with real-time validation of inputs.</p>
+        <a href="https://github.com/your-repo" target="_blank" class="small-button">GitHub</a>
+
+	    </div>
+
+		
+		
+		<div class="card">
+		<img src="/images/to do.png" alt="To-Do">
+	      <h3>To-Do Web Application</h3>
+	      <p><b>Using: HTML, CSS, JavaScript </b></p>
+	      <p>A simple, functional to-do app that lets users add, delete, and mark tasks as completed.</p>
+       <a href="https://github.com/your-repo" target="_blank" class="small-button">GitHub</a>
+
+	    </div>
+		
+      <div class="card">
+		<img src="/images/calculator.png" alt="calculator">
+	      <h3>To-Do Web Application</h3>
+	      <p><b>Using: HTML, CSS, JavaScript </b></p>
+	      <p>A simple, functional to-do app that lets users add, delete, and mark tasks as completed.</p>
+        <a href="https://github.com/your-repo" target="_blank" class="small-button">GitHub</a>
+
+	    </div>
+
+		<div class="card">
+			<img src="/images/netflix.png" alt="Netflix Clone">
+	      <h3>Netflix Clone</h3>
+	      <p><b>Using:HTML, CSS, JavaScript</b></p>
+	      <p>A front-end replica of Netflix's homepage with responsive layout and embedded media sections.</p>
+        <a href="https://github.com/your-repo" target="_blank" class="small-button">GitHub</a>
+
+	    </div>
+		
+	  </div>
+	</section>
+
+
+  <section id="contact">
+    <div><h2>Contact</h2></div>
+    <form onsubmit="return sendMessage(this)">
+      <label>Name:</label>
+      <input type="text" name="name" required />
+      <label>Email:</label>
+      <input type="email" name="email" required />
+      <label>Message:</label>
+      <textarea id="msg" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+   <footer class="footer">
+     <p>&copy; 2025 Kishore R. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://github.com/Kishorer007" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/kishorer2003" target="_blank">LinkedIn</a>
+      <a href="mailto:rkishoreukt@gmail.com">Email</a>
+    </div>
+</footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+    }
+
+    function sendMessage(form) {
+      alert("Thanks, " + form.name.value + "! Your message has been sent.");
+      form.reset();
+      return false;
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+      }
+      revealSections();
+    };
+
+    function revealSections() {
+      const sections = document.querySelectorAll("section");
+      const triggerPoint = window.innerHeight * 0.85;
+
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < triggerPoint) {
+          section.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealSections);
+  </script>
+</body>
+</html>
