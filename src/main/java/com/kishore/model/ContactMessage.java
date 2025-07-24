@@ -9,8 +9,6 @@ public class ContactMessage implements Serializable {
     public String getName() {
         return name;
     }
-
-    
     public void setName(String name) {
         this.name = name;
     }
@@ -26,8 +24,8 @@ public class ContactMessage implements Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
-
-
-    
-
 }
+
+
+
+ 

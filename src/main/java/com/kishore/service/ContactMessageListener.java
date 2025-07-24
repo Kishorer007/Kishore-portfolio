@@ -1,29 +1,33 @@
 package com.kishore.service;
 
-import com.kishore.model.ContactMessage;
-import jakarta.mail.MessagingException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
+
+import com.kishore.model.ContactMessage;
 
 @Component
 public class ContactMessageListener {
 
-    private final JavaMailSender mailSender;
-
-    public ContactMessageListener(JavaMailSender mailSender) {
-        this.mailSender = mailSender;
-    }
+    @Autowired
+    private JavaMailSender mailSender;
 
     @JmsListener(destination = "contact.queue")
-    public void receiveMessage(ContactMessage message) throws MessagingException {
-        SimpleMailMessage mail = new SimpleMailMessage();
-        mail.setTo("your_email@gmail.com"); // your inbox
-        mail.setSubject("New Contact Form Submission");
-        mail.setText("From: " + message.getName() + " (" + message.getEmail() + ")\n\n" + message.getMessage());
+    public void processMessage(ContactMessage message) {
+        try {
+            SimpleMailMessage email = new SimpleMailMessage();
+            email.setTo("your_email@gmail.com");
+            email.setSubject("New Contact Form Message");
+            email.setText("Name: " + message.getName() + "\n"
+                        + "Email: " + message.getEmail() + "\n"
+                        + "Message: " + message.getMessage());
 
-        mailSender.send(mail);
+            mailSender.send(email);
+            System.out.println("✅ Email sent from JMS listener");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
-

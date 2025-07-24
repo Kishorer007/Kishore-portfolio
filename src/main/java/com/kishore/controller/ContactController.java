@@ -1,8 +1,6 @@
 package com.kishore.controller;
 
-// Update the import below to match the actual package of ContactMessage
 import com.kishore.model.ContactMessage;
-// Make sure this import matches the actual package of your JmsProducer class
 import com.kishore.service.JmsProducer;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +15,12 @@ public class ContactController {
         this.jmsProducer = jmsProducer;
     }
 
+    @GetMapping("/")
+	 
+	public String home() {
+		return "index";
+	}
+    
     @PostMapping
     public String receiveContact(@RequestBody ContactMessage message) {
         jmsProducer.sendMessage(message);
