@@ -2,6 +2,7 @@ package com.kishore.model;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class ContactMessage implements Serializable {
     private String name;
     private String email;

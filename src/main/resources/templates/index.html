@@ -53,7 +53,7 @@
     </div>
     <div class="home-image" style="position: relative; width: 300px; height: 300px;">
   <div class="blob-bg" style="background: linear-gradient(135deg, #6e8efb, #a777e3);"></div>
-  <img src="images/profile.jpeg" alt="Kishore R" style="width: 100%; border-radius: 50%; position: relative; z-index: 1;">
+  <img src="images/profile.jpg" alt="Kishore R" style="width: 100%; border-radius: 50%; position: relative; z-index: 1;">
 	</div>
 
     </div>
@@ -154,15 +154,17 @@
   <section id="contact">
     <div><h2 id="hd">Contact</h2></div>
     <div id="contact-form">
-      <form onsubmit="return sendMessage(this)">
-      <label>Name:</label>
-      <input type="text" name="name" required />
-      <label>Email:</label>
-      <input type="email" name="email" required />
-      <label>Message:</label>
-      <textarea id="msg" name="message" required></textarea>
-      <button type="submit">Send</button>
-    </form></div>
+    <form id="contactForm" onsubmit="return sendMessage(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Send</button></div>
   </section>
 
    <footer class="footer">
@@ -175,40 +177,41 @@
     <p>&copy; 2025 Kishore R. All rights reserved.</p>
 </footer>
 
- <script>
-  function sendMessage(form) {
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    };
+<script>
+  function sendMessage(event) {
+    event.preventDefault();
 
-    // Optional: log the form data before sending
-    console.log("📨 Sending message:", formData);
+    const form = document.getElementById("contactForm");
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
 
-    fetch('http://localhost:8080/contact', {
-      method: 'POST',
+    fetch("/contact/sendEmail", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: JSON.stringify(formData)
+      body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
     })
     .then(response => {
-      if (response.ok) {
-        alert("✅ Message sent successfully!");
-        form.reset(); // Clear the form
-      } else {
-        alert("❌ Failed to send message.");
-      }
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.text(); // could also return JSON
+    })
+    .then(data => {
+      alert("Thanks, " + name + "! Your message has been sent.");
+      form.reset();
     })
     .catch(error => {
-      console.error("⚠️ Error while sending message:", error);
-      alert("⚠️ An error occurred. Please try again later.");
+      alert("Sorry, there was an error sending your message.");
+      console.error("Error:", error);
     });
 
-    return false; // Prevent default form submission
+    return false;
   }
 </script>
+
+
+  
 
 </body>
 </html>

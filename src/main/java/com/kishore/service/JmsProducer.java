@@ -20,4 +20,9 @@ public class JmsProducer {
         // Actual queue name must match your listener's destination
         jmsTemplate.convertAndSend("contact.queue", message);
     }
+
+	public void send(String formattedMessage) {
+		// TODO Auto-generated method stub
+		
+	}
 }
