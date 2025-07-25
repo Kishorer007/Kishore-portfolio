@@ -22,7 +22,6 @@ public class JmsProducer {
     }
 
 	public void send(String formattedMessage) {
-		// TODO Auto-generated method stub
 		
 	}
 }
