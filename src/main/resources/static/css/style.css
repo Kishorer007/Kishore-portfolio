@@ -67,6 +67,9 @@ section {
 	font-size:large;
 }
 
+p{
+  text-align: justify;
+}
 
 .card-container {
   display: flex;
@@ -165,6 +168,8 @@ section {
   justify-content: right;
   padding: 20px;
   box-sizing: border-box;
+  text-align: justify;
+
 }
 
 
