@@ -7,6 +7,38 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/icon.jpg">
   <style>
+
+    @media (max-width: 992px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text, .home-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
     @media (max-width: 600px) {
       nav a, .btn {
         display: block;
