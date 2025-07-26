@@ -18,7 +18,7 @@ public class ContactMessageListener {
     public void processMessage(ContactMessage message) {
         try {
             SimpleMailMessage email = new SimpleMailMessage();
-            email.setTo("your_email@gmail.com");
+            email.setTo("2020ec0929@gmail.com");
             email.setSubject("New Contact Form Message");
             email.setText("Name: " + message.getName() + "\n"
                         + "Email: " + message.getEmail() + "\n"
