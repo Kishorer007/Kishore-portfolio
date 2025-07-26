@@ -67,9 +67,7 @@ section {
 	font-size:large;
 }
 
-p{
-  text-align: justify;
-}
+
 
 .card-container {
   display: flex;
@@ -233,7 +231,10 @@ p{
   animation: blob 10s infinite ease-in-out;
   background-image: radial-gradient( circle 341px at 10% 20%,  rgba(132,94,194,1) 0%, rgba(196,243,251,1) 90% );
 }
-         
+
+#intro{
+  text-align: justify;
+}
 
 @keyframes blob {
   0%,
