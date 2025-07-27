@@ -221,7 +221,7 @@ section {
 
 .blob-bg {
   position: absolute;
-  width: 80%;
+  width: 70%;
   height: 350px;
   top: 70%;
   left: 50%;
@@ -351,5 +351,19 @@ section {
   background: linear-gradient(to right, #0072ff, #004e92, #002d5b);
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+#loadingSpinner {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #007bff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
 }
 
