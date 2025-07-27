@@ -20,11 +20,7 @@
 }
 
 @media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
+  
   section {
     padding: 40px 20px;
   }
@@ -40,7 +36,16 @@
 }
 
     @media (max-width: 600px) {
-      nav a, .btn {
+
+        nav{
+           display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+          font-size: 16px;
+        }
+
+      nav a{
         display: block;
         margin: 10px 0;
       }
