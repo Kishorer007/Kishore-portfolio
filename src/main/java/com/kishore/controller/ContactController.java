@@ -31,7 +31,7 @@ public class ContactController {
             SimpleMailMessage mail = new SimpleMailMessage();
             mail.setFrom("rkishoreukt@gmail.com");
             mail.setTo("2020ec0929@svce.ac.in");
-            mail.setSubject("New Message from Portfolio");
+            mail.setSubject("You received a new message from your portfolio site:");
             mail.setText("Name: " + name + "\nEmail: " + email + "\nMessage: " + message);
             System.out.println("MailSender is null? " + (mailSender == null)); 
 
