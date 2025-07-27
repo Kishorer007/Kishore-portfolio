@@ -228,7 +228,7 @@
     })
     .then(response => {
       if (!response.ok) throw new Error("Network response was not ok");
-      return response.text(); // could also return JSON
+      return response.text();
     })
     .then(data => {
       alert("Thanks, " + name + "! Your message has been sent.");
@@ -238,7 +238,6 @@
       alert("Sorry, there was an error sending your message.");
       console.error("Error:", error);
     });
-
     return false;
   }
 </script>
