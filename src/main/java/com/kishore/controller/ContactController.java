@@ -42,9 +42,6 @@ public class ContactController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Mail send failed.");
         }
     }
-
-
-
-   
-    
 }
+
+
