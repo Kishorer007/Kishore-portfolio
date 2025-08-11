@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kishore R</title>
+  <title>Kishore R | Java Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Kishore R - Java Full Stack Developer specializing in Spring Boot, Hibernate, and modern web technologies">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
 
     @media (max-width: 992px) {
@@ -60,75 +66,155 @@
 </head>
 <body>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#home">Kishore R</a>
+
+      </div>
+      <div class="nav-links">
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
   </nav>
 
  <section id="home">
- <div id="Welcome"><p>Welcome to my <span>Portfolio!</span></p></div>
+  <div class="particles-container" id="particles-js"></div>
+  <div id="Welcome" data-aos="fade-down" data-aos-delay="200">
+    <p>Welcome to my <span>Portfolio!</span></p>
+  </div>
   <div class="home-container">
-    <div class="home-text">
-      <h1>Hello I'm Kishore</h1>
-      <div id="about"><p>About Me</p></div>
-   <p id="intro">
-  I’m a <strong>Java Full Stack Developer</strong> with hands-on experience in building dynamic web applications using 
-  <strong>Java, Spring Boot, Hibernate, JSP, and MySQL</strong> on the backend, and 
-  <strong>HTML, CSS, JavaScript</strong> on the frontend. I specialize in developing end-to-end solutions with 
-  clean code, efficient design, and strong database integration. I’m passionate about turning ideas into 
-  real-time applications that solve real-world problems.
-	</p>
-    <p id="intro">
-  I am a <strong>quick learner</strong>, <strong>detail-oriented</strong>, and thrive in <strong>problem-solving</strong> scenarios. 
-  I focus on building <strong>robust</strong> and <strong>scalable web applications</strong> that deliver meaningful value to both users and businesses. 
-  I’m committed to <strong>continuous growth</strong> and love exploring new <strong>technologies and development practices</strong> to enhance my skills and the quality of my work.
-	</p>
-
-
-  
-   <a class="btn" href="/files/Kishore R.pdf" download>MY Resume</a>
+    <div class="home-text" data-aos="fade-right" data-aos-delay="400">
+      <h1 class="glitch-text" data-text="Hello I'm Kishore">Hello I'm Kishore</h1>
+      <div class="typewriter">
+        <span id="typewriter-text"></span><span class="cursor">|</span>
+      </div>
+      <div class="about-box" data-aos="flip-up" data-aos-delay="800">
+        <p id="intro">
+          I'm a <strong>Java Full Stack Developer</strong> with expertise in enterprise applications, cloud solutions, and software architecture. Proficient in <strong>Java, Spring Boot, Hibernate</strong> for backend development and <strong>HTML5, CSS3, JavaScript</strong> for frontend implementation. Experienced in building <strong>RESTful APIs</strong>, <strong>microservices</strong>, and optimizing database performance. Committed to delivering scalable, maintainable solutions through clean code practices, continuous learning, and agile methodologies.
+        </p>
+      </div>
+      <div class="button-group">
+        <a class="btn" href="/files/Kishore R.pdf" download><i class="fas fa-download"></i> Download Resume</a>
+        <a class="btn btn-outline" href="#contact"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      </div>
     </div>
-    <div class="home-image" style="position: relative; width: 300px; height: 300px;">
-  <div class="blob-bg" style="background: linear-gradient(135deg, #6e8efb, #a777e3);"></div>
-  <img src="images/profile.jpg" alt="Kishore R" style="width: 100%; border-radius: 50%; position: relative; z-index: 1;">
-	</div>
-
+    <div class="home-image" data-aos="fade-left" data-aos-delay="600">
+      <div class="blob-bg"></div>
+      <img src="images/profile.jpg" alt="Kishore R">
     </div>
-
+  </div>
 </section>
   
 
-	  <section id="skills">
-	  <h2 id="hd">Skills</h2>
-	  <div class="card-container">
-      <div class="card">HTML & CSS</div>
-	    <div class="card">JavaScript</div>
-      <div class="card">Java</div>
-	    <div class="card">MySQL</div>
-      <div class="card">Spring Boot</div>
-	    <div class="card">Servlet</div>
-	    <div class="card">Hibernate</div>
-	    <div class="card">JDBC</div>
-	    <div class="card">REST API</div>
-	    <div class="card">BootsStrap</div>
-	    <div class="card">GIT & GIT Hub</div>
-	    <div class="card">Tomcat</div>
-	 	 </div>
-     <div>
-      <p class="skill-description">
-        I have a strong foundation in Java and its frameworks, particularly Spring Boot, which I use to build robust backend services. 
-        My expertise extends to front-end technologies like HTML, CSS, and JavaScript, allowing me to create responsive and user-friendly interfaces. 
-        I am proficient in database management with MySQL and have experience with Hibernate for ORM. 
-        Additionally, I am skilled in creating RESTful APIs and have a good understanding of version control using Git.
-      </p>
-     </div>
-		</section>
+<section id="skills">
+  <div class="section-header" data-aos="fade-down">
+    <h2 id="hd">Technical Skills</h2>
+    <div class="section-divider"></div>
+  </div>
+  
+  <div class="skills-container">
+    <!-- Frontend Skills -->
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+      <div class="skill-icon"><i class="fab fa-html5"></i></div>
+      <div class="skill-name">HTML5</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="90"></div>
+      </div>
+    </div>
+    
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="150">
+      <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+      <div class="skill-name">CSS3</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="85"></div>
+      </div>
+    </div>
+    
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+      <div class="skill-icon"><i class="fab fa-js"></i></div>
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="80"></div>
+      </div>
+    </div>
+    
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="250">
+      <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
+      <div class="skill-name">Bootstrap</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="85"></div>
+      </div>
+    </div>
+    
+    <!-- Backend Skills -->
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+      <div class="skill-icon"><i class="fab fa-java"></i></div>
+      <div class="skill-name">Java</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="95"></div>
+      </div>
+    </div>
+    
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="350">
+      <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+      <div class="skill-name">Spring Boot</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="90"></div>
+      </div>
+    </div>
+    
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+      <div class="skill-icon"><i class="fas fa-database"></i></div>
+      <div class="skill-name">Hibernate</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="85"></div>
+      </div>
+    </div>
+    
+    <!-- Database & Tools -->
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="450">
+      <div class="skill-icon"><i class="fas fa-database"></i></div>
+      <div class="skill-name">MySQL</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="90"></div>
+      </div>
+    </div>
+    
+    <div class="skill-card" data-aos="flip-left" data-aos-delay="500">
+      <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+      <div class="skill-name">Git & GitHub</div>
+      <div class="skill-level">
+        <div class="skill-progress" data-progress="85"></div>
+      </div>
+    </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="skill-info">
+            <h4>REST API</h4>
+            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div data-aos="fade-up" data-aos-delay="800">
+    <p class="skill-description">
+      My technical skills span both frontend and backend development. On the frontend, I have extensive experience with HTML5, CSS3 and JavaScript for creating responsive and interactive user interfaces. For backend development, I leverage Java and Spring Boot to build robust enterprise applications, with Hibernate for efficient object-relational mapping. I'm well-versed in database design using MySQL and implement RESTful APIs following best practices. Version control with Git and GitHub is an integral part of my development workflow.
+    </p>
+  </div>
+</section>
 
 
 	<section id="projects">
-	  <h2 id="hd">Projects</h2>
-	  <div class="card-container">
+  <div class="section-header" data-aos="fade-down">
+    <h2 id="hd">Featured Projects</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="card-container">
 	    <div class="card">
 	    <img src="/images/movie ticket.png" alt="Movie Ticket Booking System">
 	      <h3>Movie Ticket Booking System</h3>
@@ -188,35 +274,168 @@
 
 
   <section id="contact">
-    <div><h2 id="hd">Contact</h2></div>
-    <div id="contact-form">
-    <form id="contactForm" onsubmit="return sendMessage(event)">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-    <button id="sendBtn" type="submit">Send</button>
-    <div id="loadingSpinner" class="spinner" style="display: none;"></div>
-    </form>
+    <div class="section-header" data-aos="fade-down">
+      <h2 id="hd">Get In Touch</h2>
+      <div class="section-divider"></div>
+    </div>
+    
+    <div class="contact-cards-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="contact-card" data-aos="flip-up" data-aos-delay="100">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Location</h3>
+        <p>Thiruvallur,Tamil Nadu, India</p>
+      </div>
+      
+      <div class="contact-card" data-aos="flip-up" data-aos-delay="200">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email</h3>
+        <p><a href="mailto:rkishoreukt@gmail.com">rkishoreukt@gmail.com</a></p>
+      </div>
+      
+      <div class="contact-card" data-aos="flip-up" data-aos-delay="300">
+        <div class="contact-icon">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <h3>LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/kishorer2003" target="_blank">kishorer2003</a></p>
+      </div>
+    </div>
+    
+    <div id="contact-form" data-aos="fade-left" data-aos-delay="400">
+      <h3><i class="fas fa-paper-plane"></i> Send Me a Message</h3>
+      <form id="contactForm" onsubmit="return sendMessage(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        
+        <button id="sendBtn" type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+      </form>
     </div>
   </section>
 
    <footer class="footer">
-     
-    <div class="footer-links">
-      <a href="https://github.com/Kishorer007" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/kishorer2003" target="_blank">LinkedIn</a>
-      <a href="mailto:rkishoreukt@gmail.com">Email</a>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h3>Kishore R</h3>
+      <p>Java Full Stack Developer</p>
     </div>
-    <p>&copy; 2025 Kishore R. All rights reserved.</p>
+    
+    <div class="footer-links">
+      <a href="https://github.com/Kishorer007" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/kishorer2003" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:rkishoreukt@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+    
+   
+  
+  <div class="footer-bottom">
+    <p>Built with <i class="fas fa-heart"></i> using Spring Boot</p>
+  </div>
 </footer>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/app.js"></script>
 <script>
+  // Initialize AOS animation library
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+  
+  // Initialize particles.js
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: '#00c6ff' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.5, random: false },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: '#00c6ff',
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: 'none',
+        random: false,
+        straight: false,
+        out_mode: 'out',
+        bounce: false
+      }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: { enable: true, mode: 'grab' },
+        onclick: { enable: true, mode: 'push' },
+        resize: true
+      },
+      modes: {
+        grab: { distance: 140, line_linked: { opacity: 1 } },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+  
+  // Typewriter effect
+  const typewriterText = document.getElementById('typewriter-text');
+  const phrases = ['Java Developer', 'Spring Boot Expert', 'Full Stack Developer', 'Problem Solver'];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+  
+  function typeWriter() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+      typewriterText.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      typewriterText.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
+    }
+    
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      isDeleting = true;
+      typingSpeed = 1000; // Pause at end
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      typingSpeed = 500; // Pause before typing next phrase
+    }
+    
+    setTimeout(typeWriter, typingSpeed);
+  }
+  
+  // Start the typewriter effect
+  setTimeout(typeWriter, 1000);
+  
+  // Contact form submission
   function sendMessage(event) {
     event.preventDefault();
 
@@ -240,11 +459,33 @@
       return response.text();
     })
     .then(data => {
-      alert("Thanks, " + name + "! Your message has been sent.");
+      // Create a success notification
+      const notification = document.createElement('div');
+      notification.className = 'notification success';
+      notification.innerHTML = `<i class="fas fa-check-circle"></i> Thanks, ${name}! Your message has been sent.`;
+      document.body.appendChild(notification);
+      
+      // Remove notification after 5 seconds
+      setTimeout(() => {
+        notification.classList.add('fade-out');
+        setTimeout(() => notification.remove(), 500);
+      }, 5000);
+      
       form.reset();
     })
     .catch(error => {
-      alert("Sorry, there was an error sending your message.");
+      // Create an error notification
+      const notification = document.createElement('div');
+      notification.className = 'notification error';
+      notification.innerHTML = `<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message.`;
+      document.body.appendChild(notification);
+      
+      // Remove notification after 5 seconds
+      setTimeout(() => {
+        notification.classList.add('fade-out');
+        setTimeout(() => notification.remove(), 500);
+      }, 5000);
+      
       console.error("Error:", error);
     })
     .finally(() => {
@@ -254,6 +495,16 @@
 
     return false;
   }
+  
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
 </script>
 
 
