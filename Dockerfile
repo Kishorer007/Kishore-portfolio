@@ -5,6 +5,7 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
+# Use a smaller Java image to run the app
 # Run stage (Java 21)
 FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
